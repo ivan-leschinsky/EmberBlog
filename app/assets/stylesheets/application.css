@@ -1,10 +1,7 @@
 /*
- * require foundation_and_overrides
  *= require_tree .
  *= require_self
  */
-
-
 
 /* Effect Move Left */
 .effect-moveleft {
