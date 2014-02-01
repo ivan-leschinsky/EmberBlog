@@ -4,17 +4,66 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Another Blog" %></title>
 
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="/css/component.css" />
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-  <div class="row">
-    <%= yield %>
-  </div>
+
+  <div id="perspective" class="perspective effect-airbnb">
+    <div class="container">
+        <div class="wrapper"><!-- wrapper needed for scroll -->
+                    <!-- Top Navigation -->
+          <div class="codrops-top clearfix">
+            <p><button id="showMenu">Menu</button></p>
+          </div>
+          <header class="codrops-header">
+            <h1>Here is my another Blog</h1>
+          </header>
+          <div class="main clearfix">
+            <%= yield %>
+            <div class="column">
+              <p>Shomething here.</p>
+            </div>
+            <div class="column">
+              <nav class="codrops-demos">
+                <a href="#" class="current-demo">Test 1</a>
+                <a href="#">Test 2</a>
+              </nav>
+            </div>
+            <div class="related">
+              <p>If you enjoyed this blog like:</p>
+              <p><a href="http://vanoblog.tk">Another my blog</a></p>
+              <p><a href="http://github.com/vanopiano/">GitHub repository</a></p>
+            </div>
+          </div><!-- /main -->
+
+        </div><!-- wrapper -->
+    </div><!-- /container -->
+    <nav class="outer-nav left vertical">
+      <a href="/" class="icon-home">Home</a>
+      <a href="/posts" class="icon-news">Blog</a>
+      <a href="/posts/new" class="icon-news">New Post</a>
+      <a href="#" class="icon-lock">Security</a>
+  </nav>
+  </div><!-- /perspective -->
+
+
+
     <%= javascript_include_tag "application" %>
+    <script src="/js/classie.js"></script>
+    <script src="/js/menu.js"></script>
   </body>
+
+
+
+
+
 </html>
