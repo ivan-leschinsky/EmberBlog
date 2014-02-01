@@ -1,7 +1,7 @@
 /*
  *= require_self
  * require foundation_and_overrides
- *= require_tree .
+ * require_tree .
  */
 
 
@@ -74,4 +74,5 @@
     position: fixed;
     top: 10px;
     left: 10px;
+    font-size: 175%;
 }
