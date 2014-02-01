@@ -6,12 +6,9 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "Another Blog" %></title>
 
-    
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="/css/demo.css" />
-    <link rel="stylesheet" type="text/css" href="/css/component.css" />
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -57,9 +54,7 @@
 
 
 
-    <%= javascript_include_tag "application" %>
-    <script src="/js/classie.js"></script>
-    <script src="/js/menu.js"></script>
+    
   </body>
 
 
