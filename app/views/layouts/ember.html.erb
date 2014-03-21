@@ -17,49 +17,7 @@
   </head>
 
   <body>
-
-  <div id="perspective" class="perspective effect-airbnb">
-    <div class="container">
-        <div class="wrapper"><!-- wrapper needed for scroll -->
-                    <!-- Top Navigation -->
-          <div class="codrops-top clearfix">
-            <p><button id="showMenu">Menu</button></p>
-          </div>
-          <header class="codrops-header">
-            <h1 class="codrops-top">Here is my another Blog</h1>
-          </header>
-          <div class="main clearfix">
-            <%= yield %>
-            <div class="column">
-              <p>Shomething here.</p>
-            </div>
-            <div class="column">
-              <nav class="codrops-demos">
-                <a href="#" class="current-demo">Test 1</a>
-                <a href="#">Test 2</a>
-              </nav>
-            </div>
-            <div class="related">
-              <p>If you enjoyed this blog like:</p>
-              <p><a href="http://vanoblog.tk">Another my blog</a></p>
-              <p><a href="http://github.com/vanopiano/">GitHub repository</a></p>
-            </div>
-          </div><!-- /main -->
-
-        </div><!-- wrapper -->
-    </div><!-- /container -->
-    <nav class="outer-nav left vertical">
-      <a href="/" class="icon-home">Home</a>
-      <a href="/posts" class="icon-news">Blog</a>
-      <a href="/posts/new" class="icon-news">New Post</a>
-      <a href="#" class="icon-lock">Security</a>
-  </nav>
-  </div><!-- /perspective -->
-
-
-  <script src="/js/classie.js"></script>
-  <script src="/js/menu.js"></script>
-    
+    <%= yield %>
   </body>
 
 

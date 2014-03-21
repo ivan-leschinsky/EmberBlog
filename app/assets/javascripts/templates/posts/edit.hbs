@@ -1,0 +1,33 @@
+<div class="row">
+        
+  <div class="col-md-12">
+    <form>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="pageheader">
+            <h2>
+              <a href="//back" {{action goPostsBack}}><i class="fa fa-reply"></i></a> Редактирование поста {{title}}
+            </h2>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Название <span class="asterisk">*</span></label>
+            <div class="col-sm-9">
+              <label {{bind-attr for="nameField.elementId"}}>Название</label>
+              {{view Ember.TextField valueBinding='title' required="true" name='title' class="form-control input-md" viewName='titleField'}}
+            </div>
+          </div>
+        </div><!-- panel-body -->
+        <div class="panel-footer">
+          <div class="row">
+            <div class="col-sm-9 col-sm-offset-3">
+              <button {{action 'save'}} type="submit" class="btn btn-primary">{{buttonTitle}}</button>
+              <button {{action 'remove'}} claTss="btn btn-danger">Удалить</button>
+            </div>
+          </div>
+        </div>
+      </div><!-- panel -->
+    </form>
+  </div><!-- col-md-6 -->
+</div>

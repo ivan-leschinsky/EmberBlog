@@ -1,0 +1,37 @@
+<div class="row">
+        
+  <div class="col-md-12">
+    <form class="form-horizontal">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="pageheader">
+            <h2><a href="//back" {{action goPostsBack}}><i class="fa fa-reply"></i></a> {{headerTitle}} {{title}}</h2>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label class="col-sm-3 control-label">{{labelName}} <span class="asterisk">*</span></label>
+            <div class="col-sm-9 col-lg-7">
+              {{view Ember.TextField valueBinding='title' required="true" name='title' class="form-control input-md" viewName='titleField'}}
+            </div>
+          </div>
+           <div class="form-group">
+            <label class="col-sm-3 control-label">{{labelName}} <span class="asterisk">*</span></label>
+            <div class="col-sm-9 col-lg-7">
+              {{view Ember.TextAreaField valueBinding='body' required="true" name='body' class="form-control input-md" viewName='bodyField'}}
+            </div>
+          </div>
+
+        </div><!-- panel-body -->
+        <div class="panel-footer">
+          <div class="row">
+            <div class="col-sm-9 col-lg-7 col-sm-offset-3">
+              <button {{action 'save'}} type="submit" class="btn btn-primary">{{buttonCreate}}</button>
+              <button {{action 'cancel'}} class="btn btn-warning">{{buttonCancel}}</button>
+            </div>
+          </div>
+        </div>
+      </div><!-- panel -->
+    </form>
+  </div><!-- col-md-6 -->
+</div>

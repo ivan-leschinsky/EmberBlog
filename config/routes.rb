@@ -1,10 +1,13 @@
 Vanoblog::Application.routes.draw do
-  resources :posts
+  
+  namespace :ember do
+    resources :posts
+    resources :comments
+  end
 
   # See how all your routes lay out with "rake routes".
-  get 'ember' => 'ember#index'
   # You can have the root of your site routed with "root"
-  root 'posts#index'
+  root 'ember#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
