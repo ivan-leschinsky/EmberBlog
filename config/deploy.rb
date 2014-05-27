@@ -8,7 +8,7 @@ set :domain, 'likerok.com'
 set :user, 'deployer'
 set :deploy_to, '/var/www/vanoblog.tk'
 set :repository, 'git@github.com:ivan-leschinsky/EmberBlog.git'
-set :branch, 'production'
+set :branch, 'master'
 set :rails_env, 'production'
 set :shared_paths, ['config/database.yml', 'log', ]
 set :port, '37926'

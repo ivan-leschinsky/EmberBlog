@@ -7,6 +7,7 @@ gem 'rails', '4.0.2'
 group :development, :test do
   gem 'sqlite3'
   gem 'mina'
+  gem 'mina-scp'
 end
 group :production do
   gem 'pg'
